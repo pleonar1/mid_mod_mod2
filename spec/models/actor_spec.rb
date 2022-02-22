@@ -17,5 +17,15 @@ RSpec.describe Actor do
 
       expect(Actor.youngest_to_oldest).to eq([actor1, actor3, actor2, actor4, actor5])
     end
+
+    it "can return the average age of all actors" do
+      actor1 = Actor.create!(name: "Paul", age: 28)
+      actor2 = Actor.create!(name: "Mike", age: 32)
+      actor3 = Actor.create!(name: "Dani", age: 30)
+      actor4 = Actor.create!(name: "Craig", age: 44)
+      actor5 = Actor.create!(name: "My mom", age: 62)
+
+      expect(Actor.average_age).to eq(39.2)
+    end
   end
 end
