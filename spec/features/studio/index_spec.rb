@@ -12,10 +12,12 @@ RSpec.describe "Studios Index Page" do
 
       visit "/studios"
 
-      expect(studio2.name).to appear_before(studio1.name)
-      expect(movie3.title).to appear_before(studio1.name)
+      expect(studio1.name).to appear_before(studio2.name)
+      expect(movie1.title).to appear_before(studio2.name)
       expect(studio1.name).to appear_before(movie2.title)
       expect(studio1.name).to appear_before(movie1.title)
+      expect(studio1.name).to appear_before(movie3.title)
+      expect(studio2.name).to appear_before(movie3.title)
 
       expect(page).to have_content(studio1.location)
       expect(page).to have_content(studio2.location)
