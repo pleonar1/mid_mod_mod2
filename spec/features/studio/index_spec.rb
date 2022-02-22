@@ -21,6 +21,7 @@ RSpec.describe "Studios Index Page" do
 
       expect(page).to have_content(studio1.location)
       expect(page).to have_content(studio2.location)
+      save_and_open_page
     end
   end
 end
