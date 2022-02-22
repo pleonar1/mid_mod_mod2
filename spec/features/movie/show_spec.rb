@@ -14,8 +14,8 @@ RSpec.describe 'Movie show page' do
       expect(page).to have_content(movie.title)
       expect(page).to have_content(movie.creation_year)
       expect(page).to have_content(movie.genre)
-      expect(actor2).to appear_before(actor1)
-      expect(actor1).to appear_before(actor3)
+      expect(actor2.name).to appear_before(actor1.name)
+      expect(actor1.name).to appear_before(actor3.name)
       expect(page).to have_content("Actors' average age: 29")
     end
   end
