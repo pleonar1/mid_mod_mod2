@@ -1,4 +1,11 @@
 <h1><%= @movie.title %> Show Page</h1>
+
+<%= form_with method: :patch, url: "/movies/#{@movie.id}", local: true do |form| %>
+  <%= form.label "Name" %>
+  <%= form.text_field :name %>
+  <%= form.submit %>
+<% end %>
+
 <h3>Year created: <%= @movie.creation_year %></h3>
 <h3>Genre: <%= @movie.genre %></h3>
 <h4>Actors:</h4>
