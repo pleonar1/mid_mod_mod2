@@ -11,5 +11,4 @@ class MoviesController < ApplicationController
     actor_movie_join = movie.actor_movies.create(actor_id: actor.id)
     redirect_to "/movies/#{movie.id}"
   end
-
 end
